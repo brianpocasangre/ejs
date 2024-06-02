@@ -1,0 +1,24 @@
+{
+  "name": "ejs",
+  "version": "1.0.0",
+  "description": "EJS | The Complete 2024 Web Development Bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/brianpocasangre/ejs.git"
+  },
+  "author": "Brian Pocasangre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianpocasangre/ejs/issues"
+  },
+  "homepage": "https://github.com/brianpocasangre/ejs#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
