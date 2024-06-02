@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "EJS | The Complete 2024 Web Development Bootcamp",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
