@@ -7,7 +7,9 @@
   </head>
   <body>
     <h1>Hey! its <%= dayType %>, <%= message %></h1>
+
     <hr />
+
     <h1>
       <!-- Tite goes here -->
       <%= title %>
@@ -36,5 +38,18 @@
 
     <!-- Footer goes here -->
     <%- include('footer'); -%>
+
+    <hr />
+    <% if (locals.numOfLetters) { %>
+    <h1>There are <%= numOfLetters %> letters in your name.</h1>
+    <% } else { %>
+    <h1>Enter Your Name Below 👇</h1>
+    <%} %>
+
+    <form action="/submit" method="POST">
+      <input type="text" name="fName" placeholder="First name" />
+      <input type="text" name="lName" placeholder="Last name" />
+      <input type="submit" value="OK" />
+    </form>
   </body>
 </html>
