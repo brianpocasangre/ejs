@@ -8,9 +8,15 @@ const d = new Date();
 let day = d.getDay();
 let types = '';
 let messages = '';
-let fName = '';
-let lName = '';
 let numOfLetters = '';
+
+//  Write your code here:
+
+// Step 2: Make sure that static files are linked to and the CSS shows up.
+app.use(express.static('public'));
+
+//   Hint: Check the nav bar in the header.ejs to see the button hrefs
+// Step 4: Add the partials to the about and contact pages to show the header and footer on those pages.
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -22,6 +28,7 @@ if (day === 0 || day === 6) {
   messages = 'time to work Hard!';
 }
 
+// Step 1: Render the home page "/" index.ejs
 app.get('/', (req, res) => {
   let data = {
     title: 'EJS Tags',
@@ -47,6 +54,16 @@ app.post('/submit', (req, res) => {
     numOfLetters: numOfLetters,
   };
   res.render('index.ejs', data);
+});
+
+// Step 3: Add the routes to handle the render of the about and contact pages.
+
+app.get('/about', (req, res) => {
+  res.render('about.ejs');
+});
+
+app.get('/contact', (req, res) => {
+  res.render('contact.ejs');
 });
 
 app.listen(PORT, () => {
